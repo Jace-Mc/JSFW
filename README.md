@@ -1,0 +1,47 @@
+# Welcome to JFW.
+<p style="font-size: 24px;">
+Aka Jace's Simple Framework.
+A Simple Cross - Platform Graphics Framework.
+</p>
+
+# Dependencies
+[![DEPS](https://img.shields.io/badge/X11-Linux-orange)](https://www.x.org/XorgFoundation/)
+[![DEPS](https://img.shields.io/badge/Cocoa-MacOS-orange)](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CocoaFundamentals/WhatIsCocoa/WhatIsCocoa.html)
+
+<h1> X11 </h1>
+<p style="font-size: 24px;">
+The Graphics Library used by Unix and Unix  - like systems.
+</p>
+
+<h1> Cocoa </h1>
+<p style="font-size: 24px;">
+The Graphics System used by Apple devices.
+</p>
+
+<h1> Licenses </h1>
+<p style="font-size: 24px;">
+Located in: LICENSE.md
+</p1>
+
+# Some Test Code 
+```c
+#include <JSFW/jfw1.h>
+#include <stdio.h>
+
+JSFWvec2 pos = { 0, 0 };
+
+int main()
+{
+    JSFWinit();
+    JSFWwindow* window = CreateNewWindow(400, 400, "My JFW App", pos);
+        
+    while (!JSFWwindowHasClosed(window))
+    {
+        JSFWpollEvents();
+        JSFWdisplayWindow(window);
+    }
+
+    JSFWend();
+    return 0;
+}
+```
