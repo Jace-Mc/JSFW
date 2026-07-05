@@ -1,4 +1,4 @@
-# Welcome to JFW.
+# Welcome to JSFW.
 <p style="font-size: 24px;">
 Aka Jace's Simple Framework.
 A Simple Cross - Platform Graphics Framework.
