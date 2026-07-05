@@ -1,6 +1,9 @@
 # GLAL AND JFW 
 <p style="font-size: 24px;">
 Current License: zlib/libpng
+<p>
+A OSI - Certified License.
+</p>
 
 Copyright (c) 2026 Jace McCartney
 

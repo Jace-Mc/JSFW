@@ -1,4 +1,4 @@
-#include <JSFW/jfw1.h>
+#include <JSFW/jsfw1.h>
 #include <stdio.h>
 
 JSFWvec2 pos = { 0, 0 };
