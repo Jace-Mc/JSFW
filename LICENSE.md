@@ -1,4 +1,4 @@
-# GLAL AND JFW 
+# GLAL AND JSFW 
 <p style="font-size: 24px;">
 Current License: zlib/libpng
 <p>
