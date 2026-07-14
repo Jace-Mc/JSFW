@@ -5,7 +5,7 @@
  * GLAL ~ for communcation with the operating systems.
  * 
  * LICENSE:
- * Look a LICENSE.md
+ * Look at LICENSE.md
  */
 #ifndef JSFW1_H__
 #   define JSFW1_H__

@@ -6,8 +6,10 @@
  * 
  * I'm thinking of adding 
  * truetype functions,
- * audio function,
+ * audio functions,
  * etc.
- */
+ * 
+ * but for now there will just be basic window functions.
+ */ 
 
 # endif

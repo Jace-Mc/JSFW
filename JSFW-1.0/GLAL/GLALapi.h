@@ -13,7 +13,7 @@
  *     Cocoa
  * 
  * DEPENDENCIES:
- * X11 ~ CREDITS: xorg.freedesktop.org
+ * X11 ~ CREDITS: https://xorg.freedesktop.org/
  * Cocoa ~ CREDITS: https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CocoaFundamentals/WhatIsCocoa/WhatIsCocoa.html
  * 
  * LICENSE: zlib/libpng
@@ -45,8 +45,16 @@
     extern "C" {
 # endif
 
-# if defined(_STDBOOL_H)
-#   error stdbool.h is already included.
+# if defined(__linux__)
+    # if defined(_STDBOOL_H) || \
+         defined(_GLIBCXX_CSTDBOOL)
+    #   error stdbool.h is already included.
+    # endif
+# elif defined(__APPLE__)
+    # if defined(__STDBOOL_H) || \
+         defined(_GLIBCXX_CSTDBOOL)
+    #   error stdbool.h is already included.
+    # endif
 # endif
 
 # if defined(__cplusplus)
@@ -64,6 +72,9 @@
 # if! defined(XALAPI)
 #   define XALAPI
 # endif
+
+/** Typedef for unsigned int: XALuint32 */
+typedef unsigned int XALuint32;
 
 # define XAL_VERSION_MAJOR 1 // The Major Version of XAL, expands to: 1
 # define XAL_VERSION_MINOR 0 // The Minor Version of XAL, expands to: 0
@@ -110,7 +121,7 @@ typedef enum X11InputEvent
  */
 typedef struct X11Event 
 {
-    X11InputEvent type;
+    XALuint32 type;
 } X11Event;
 
 // Stores the A Macro that holds values, needed for a struct in here.
@@ -145,7 +156,31 @@ XALAPI int X11WindowClosed(void); // Checks if X11 Window Closed.
 
 # if defined(__APPLE__)
 
-// Not configured yet...
+# if! defined(CALAPI) 
+#   define CALAPI
+# endif
+
+/*!
+ * The CAL struct.
+ * 
+ * This holds CAL related functions.
+ * \param struct CAL
+ */
+typedef struct CAL CAL;
+
+/**
+ * The CocoaColor struct.
+ * 
+ * This holds all color related function.
+ * Normally used with foreground, or background colors.
+ * \param struct CocoaColor
+ */
+typedef struct CocoaColor
+{
+    
+} CocoaColor;
+
+CALAPI CAL * CreateCocoaWindow(int width, int height, const char* title, int window_pos_X, int window_pos_Y, CocoaColor color);
 
 # endif // if defined __APPLE__
 

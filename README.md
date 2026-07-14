@@ -1,4 +1,4 @@
-# Welcome to JSFW.
+# Welcome to JFW.
 <p style="font-size: 24px;">
 Aka Jace's Simple Framework.
 A Simple Cross - Platform Graphics Framework.
@@ -28,7 +28,7 @@ Other Licenses located in the LICENSES.md file.
 
 # Some Test Code 
 ```c
-#include <JSFW/jfw1.h>
+#include <JSFW/jsfw1.h>
 #include <stdio.h>
 
 JSFWvec2 pos = { 0, 0 };

@@ -36,6 +36,7 @@ int JSFWwindowHasClosed(JSFWwindow* window)
 int JSFWpollEvents(void)
 {
     X11Event e;
+    
     while (PollX11WindowEvents(&e))
         if (e.type == X11_QUIT_EVENT) return true;
 }

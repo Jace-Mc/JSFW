@@ -10,8 +10,9 @@ LINUX-BUILD:
 
 	gcc -c $(JFWSrc)/jsfwcore.c -I$(JFWinclude) -I$(IncludeDir)
 	gcc -c $(RuntimeDir)/linuxcore.c -I$(JFWinclude) -I$(IncludeDir)
-
-	ar rcs $(BuildDir)/lib/libjfw1.a jsfwcore.o linuxcore.o
+	@echo "Builded library for linux..."
+	@echo "Producing libjsfw.a in the directory $(BuildDir)/lib"
+	ar rcs $(BuildDir)/lib/libjsfw1.a jsfwcore.o linuxcore.o
 
 	cp -r $(JFWinclude)/JSFW $(BuildDir)/include/
 

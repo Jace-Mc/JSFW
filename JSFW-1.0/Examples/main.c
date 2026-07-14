@@ -1,19 +1,25 @@
-#include <JSFW/jsfw1.h>
+#include <GLAL/GLALapi.h>
 #include <stdio.h>
-
-JSFWvec2 pos = { 0, 0 };
 
 int main()
 {
-    JSFWinit();
-    JSFWwindow* window = CreateNewWindow(400, 400, "My JFW App", pos);
-        
-    while (!JSFWwindowHasClosed(window))
-    {
-        JSFWpollEvents();
-        JSFWdisplayWindow(window);
-    }
+    XAL* root = initX11Display(XAL_INIT_VIDEO, 0);
+    XAL* window = CreateX11Window(400, 400, "My XAL Application", 100, 200, COLOR_BLACK);
 
-    JSFWend();
+    while (!X11WindowClosed())
+    {
+        X11Event e;
+        while (PollX11WindowEvents(&e))
+        {
+            if (e.type == X11_MOUSE_EVENT)
+            {
+                return true;
+            }
+        }
+
+        DisplayX11Window();
+    }
+    
+    CloseX11();
     return 0;
 }

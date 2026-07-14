@@ -5,7 +5,7 @@
  * GLAL ~ for communcation with the operating systems.
  * 
  * LICENSE:
- * Look a LICENSE.md
+ * Look at LICENSE.md
  */
 #ifndef JSFW1_H__
 #   define JSFW1_H__
@@ -39,18 +39,18 @@ typedef struct JSFWwindow JSFWwindow;
 
 
 #ifdef __linux__
-// initializes JFW and X11 context.
+// initializes JSFW and X11 context.
 int JSFWinit(void);
 #elif __APPLE__
-// initializes JFW and Cocoa context.
+// initializes JSFW and Cocoa context.
 int JSFWinit(void);
 #endif
 
 // Macros! 
-#define MACRO(Type) (Type)
+#define JSFWMACRO(Type) (Type)
 
 // Sets a Default Position.
-#define DEFAULT_POS MACRO(JSFWvec2) { 0, 0 }
+#define DEFAULT_POS JSFWMACRO(JSFWvec2) { 0, 0 }
 
 // JFWwindow function: CreateNewWindow(int width, int height, const char* title, JFWvec2 pos).
 JSFWwindow * CreateNewWindow(int width, int height, const char* title, JSFWvec2 pos);
