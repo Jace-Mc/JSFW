@@ -58,3 +58,8 @@ int JSFWpollEvents(void);
 void JSFWend(void);
 int JSFWwindowHasClosed(JSFWwindow* window);
 ```
+# Use of Any AI.
+<p>
+    Any US of A.I. is not allowed in any shape or form.
+    All documentation are in a HOWTO.md file.
+</p>
